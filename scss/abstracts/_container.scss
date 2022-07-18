@@ -1,0 +1,8 @@
+.container {
+  display: block;
+  height: 100%;
+  margin: 0px 400px;
+  @include media(1300px) {
+    margin: 0px 10px;
+  }
+}

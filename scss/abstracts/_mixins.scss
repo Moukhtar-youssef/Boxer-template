@@ -1,0 +1,63 @@
+@mixin border-radius($border-radius) {
+  border-radius: $border-radius;
+}
+@mixin media($size) {
+  @if $size == mobile {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $size == small {
+    @media (min-width: 768px) and (max-width: 991px) {
+      @content;
+    }
+  } @else if $size == medium {
+    @media (min-width: 992px) and (max-width: 1199px) {
+      @content;
+    }
+  } @else if $size == below {
+    @media (max-width: 1199px) {
+      @content;
+    }
+  } @else if $size == large {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else {
+    @media (max-width: $size) {
+      @content;
+    }
+  }
+}
+@mixin section_padding {
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+}
+@mixin overlay($alpha) {
+  background-color: rgba(0, 0, 0, $alpha);
+}
+@mixin animation($style) {
+  @if $style == right {
+    transform: translate(45%, 0);
+    transition: $long-timing;
+    opacity: 0;
+  } @else if $style == left {
+    transform: translate(-45%, 0);
+    transition: $long-timing;
+    opacity: 0;
+  } @else if $style == up {
+    transform: translate(0, -45%);
+    transition: $long-timing;
+    opacity: 0;
+  } @else if $style == down {
+    transform: translate(0, 45%);
+    transition: $long-timing;
+    opacity: 0;
+  } @else if $style == pop {
+    transform: scale(0.1);
+    transition: $long-timing;
+    opacity: 0;
+  } @else if $style == fade {
+    transition: $long-timing;
+    opacity: 0;
+  }
+}

@@ -1,0 +1,53 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+    link(rel="stylesheet", href="./css/main.css")
+    link(rel="stylesheet", href="./webfonts/all.min.css")
+    link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700,800" type="text/css")
+  body 
+    //- start navbar
+    .navbar 
+      .logo
+        |Boxer
+      .container
+        ul 
+          li  
+            a.active(href="#home") home 
+          li 
+            a(href="#features") features 
+          li 
+            a(href="#pricing") pricing 
+          li 
+            a(href="#download") download 
+          li 
+            a(href="#contact") contact 
+        .menu
+          .icon
+            span 
+            span 
+            span 
+          ul 
+            li  
+              a.active(href="#home") home 
+            li 
+              a(href="#features") features 
+            li 
+              a(href="#pricing") pricing 
+            li 
+              a(href="#download") download 
+            li 
+              a(href="#contact") contact 
+    //- end navbar
+    //- strat home 
+    section.home#home
+      .overlay 
+        .container 
+          h1 Software Landing Page
+          p This is a fully Responsive, Clean Design, Modern, and Flexible Software Landing Page for startups, businesses and agencies. It is built with HTML5 & CSS3, Bootstrap 3.3.4, Font Awesome 4.3.0, and much more. Designed by templatemo. Images by Pixabay
+          img(src="./img/software-img.png", alt="", srcset="")
+    //- end home 
+  script(src="./js/main.js") 
