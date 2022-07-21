@@ -1,0 +1,75 @@
+.pricing {
+  @include section_padding;
+  h1 {
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    margin-top: 50px;
+    gap: 20px;
+    @include media(below) {
+      grid-auto-flow: row;
+      margin-top: 0;
+      .card {
+        position: unset !important;
+      }
+    }
+    .card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      &:nth-child(2) {
+        bottom: 30px;
+      }
+      .price {
+        background-color: $main-color;
+        width: 100%;
+        contain: content;
+        text-align: center;
+        h2 {
+          color: white;
+          margin: 20px 0 0 0;
+          text-transform: uppercase;
+        }
+        h4 {
+          color: white;
+          margin: 20px 0;
+          text-transform: uppercase;
+        }
+      }
+      p {
+        text-align: center;
+        background-color: $alt-color;
+        width: 100%;
+        padding: 20px 0;
+        font-size: 15px;
+      }
+      .button {
+        background-color: $alt-color;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0;
+        a {
+          text-align: center;
+          padding: 5px 50px;
+          text-transform: uppercase;
+          color: $main-color;
+          font-weight: bold;
+          cursor: pointer;
+          border: 1px solid $main-color;
+          transition: $main-transition;
+          &:hover {
+            background-color: $main-color;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,173 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="./css/main.css")
+    link(rel="stylesheet", href="./css/all.min.css")
+    link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700,800" type="text/css")
+    title Boxer
+  body 
+    //- start navbar
+    .navbar 
+      .logo
+        |Boxer
+      .container
+        ul 
+          li  
+            a.active(href="#home") home 
+          li 
+            a(href="#features") features 
+          li 
+            a(href="#pricing") pricing 
+          li 
+            a(href="#download") download 
+          li 
+            a(href="#contact") contact 
+        .menu
+          .icon
+            span 
+            span 
+            span 
+          ul 
+            li  
+              a.active(href="#home") home 
+            li 
+              a(href="#features") features 
+            li 
+              a(href="#pricing") pricing 
+            li 
+              a(href="#download") download 
+            li 
+              a(href="#contact") contact 
+    //- end navbar
+    //- strat home 
+    section.home#home
+      .overlay 
+        .container 
+          h1 Software Landing Page
+          p This is a fully Responsive, Clean Design, Modern, and Flexible Software Landing Page for startups, businesses and agencies. It is built with HTML5 & CSS3, Bootstrap 3.3.4, Font Awesome 4.3.0, and much more. Designed by templatemo. Images by Pixabay
+          img(src="../img/software-img.webp", alt="", srcset="")
+    //- end home 
+    //- start advantages 
+    section.advantages#advantages
+      .container
+        .card
+          a.fa.fa-laptop
+          h2 RESPONSIVE LAYOUT
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+        .card
+          a.fab.fa-twitter
+          h2 BOOTSTRAP 3.3.4
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+        .card
+          a.fa.fa-font
+          h2 GOOGLE FONT
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+    //- end advantages 
+    //- start features
+    section.features#features 
+      .container
+        .content
+          .text
+            h1 OUR SOFTWARE FEATURES
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            p
+              span
+                i.fa.fa-mobile
+              |Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            p
+              span
+                i.fa.fa-code
+              |Quis autem velis reprehenderit et quis voluptate velit esse quam.
+          img(src="./img/software-img.webp", alt="", srcset="") 
+        .content 
+          .text
+            h1 MORE OF YOUR SOFTWARE
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            p
+              span
+                i.fa.fa-mobile
+              |Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            p
+              span
+                i.fa.fa-code
+              |Quis autem velis reprehenderit et quis voluptate velit esse quam.
+          img(src="./img/software-img.webp", alt="", srcset="",style="order: -1;")
+    //- end features
+    //- start pricing
+    section.pricing#pricing 
+      .container 
+        h1 our pricing
+        .cards  
+          .card
+            .price  
+              h2 Basic plan 
+              h2 $10
+              h4 monthly
+            p 2 GB Space 
+            p 200 gb bandwidth 
+            p 20 more themes 
+            p lifetime support
+            .button  
+              a sign up
+          .card
+            .price  
+              h2 BUSINESS PLAN
+              h2 $20
+              h4 monthly
+            p 5 GB Space 
+            p 500 gb bandwidth 
+            p 50 more themes 
+            p lifetime support 
+            .button 
+              a sign up 
+          .card
+            .price  
+              h2 PRO PLAN 
+              h2 $30
+              h4 monthly
+            p 10 GB Space 
+            p 1,000 gb bandwidth 
+            p 100 more themes 
+            p lifetime support 
+            .button 
+              a sign up 
+    //- end pricing
+    //- start download
+    section.download#download 
+      .container
+        .content  
+          h1 DOWNLOAD OUR SOFTWARE
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+          button 
+            a.fa.fa-download
+            | download
+        img(src="./img/software-img.webp", alt="", srcset="")
+    //- end download
+    //- start contect
+    section.contact#contact 
+      .overlay
+        .container 
+          .content 
+            h1 Contact us 
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic accusamus vitae quis nobis accusantium, repellendus repudiandae debitis soluta laborum vel placeat cupiditate quibusdam ut omnis est nihil similique, impedit quod?
+            p  
+              i.fa.fa-map-marker
+              | 1234 Street Name, City Name, United States
+            p  
+              i.fa.fa-phone
+              |  0992 234234 / 0234 234234
+            p  
+              i.fa.fa-envelope
+              |  hello@yoursite.com
+          form(action="")
+            input(type="text", name="",placeholder="name")
+            input(type="email", name="",placeholder="Email")
+            input(type="text",id="subject" , name="",placeholder="subject")
+            textarea(name="",placeholder="message")
+            button send
+    //- end contact
+  script(src="./js/main.js") 
+  script(src="http://localhost:35729/livereload.js")

@@ -1,0 +1,22 @@
+.advantages {
+  @include section_padding;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include media(below) {
+      flex-direction: column;
+    }
+    .card {
+      text-align: center;
+      margin: 20px;
+      a {
+        font-size: 50px;
+        color: $main-color;
+      }
+      h2 {
+        margin: 20px;
+      }
+    }
+  }
+}

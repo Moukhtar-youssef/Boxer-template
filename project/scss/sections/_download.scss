@@ -1,0 +1,33 @@
+.download {
+  @include section_padding;
+  background-color: $alt-color;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include media(below) {
+      flex-direction: column;
+      img {
+        width: 80% !important;
+        margin-top: 40px;
+      }
+    }
+    .content {
+      button {
+        margin-top: 20px;
+        padding: 12px 40px;
+        background-color: $main-color;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: white;
+        a {
+          color: white;
+          margin-right: 15px;
+        }
+      }
+    }
+    img {
+      width: 50%;
+    }
+  }
+}

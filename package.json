@@ -1,0 +1,36 @@
+{
+  "name": "boxer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Moukhtar-youssef/Boxer-template.git"
+  },
+  "author": "moukhtar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Moukhtar-youssef/Boxer-template/issues"
+  },
+  "homepage": "https://github.com/Moukhtar-youssef/Boxer-template#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-livereload": "^4.0.2",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-webp": "^4.0.1",
+    "sass": "^1.53.0"
+  },
+  "dependencies": {
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^3.0.2",
+    "open": "^8.4.0",
+    "static-server": "^2.2.1"
+  }
+}

@@ -1,0 +1,137 @@
+.navbar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  z-index: 99;
+  .logo {
+    color: $main-color;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 35px;
+    cursor: pointer;
+    position: fixed;
+    margin: 0px 400px;
+    @include media(1600px) {
+      margin: 0px 100px;
+    }
+    @include media(1300px) {
+      margin: 0px 10px;
+    }
+    &:hover {
+      color: #666;
+    }
+  }
+  .container {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    ul {
+      z-index: 99;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: right;
+      @include media(1300px) {
+        display: none;
+      }
+      li {
+        margin-right: 30px;
+        a {
+          color: #666;
+          font-size: 13px;
+          font-weight: bold;
+          height: 70px;
+          line-height: 40px;
+          text-transform: uppercase;
+          &:hover {
+            color: $main-color;
+          }
+        }
+      }
+      .active {
+        color: $main-color;
+      }
+    }
+    .menu {
+      display: none;
+      position: relative;
+      width: 100%;
+      z-index: 99;
+      align-items: center;
+      justify-content: right;
+      @include media(1300px) {
+        display: flex;
+      }
+      .icon {
+        margin: 20px 0;
+        position: relative;
+        width: 30px;
+        height: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        span {
+          position: absolute;
+          background-color: #333;
+          height: 2px;
+          width: 100%;
+          float: left;
+          transition: $main-transition;
+          @include border-radius(1px);
+          &:first-child {
+            top: 0;
+          }
+          &:nth-child(2) {
+            top: 6px;
+          }
+          &:last-child {
+            top: 12px;
+          }
+        }
+      }
+      .active {
+        span {
+          &:first-child,
+          &:last-child {
+            top: 6px;
+          }
+          &:first-child {
+            transform: rotateZ(45deg);
+          }
+          &:last-child {
+            transform: rotateZ(-45deg);
+          }
+          &:nth-child(2) {
+            transform: translateX(-45%);
+            opacity: 0;
+          }
+        }
+      }
+      ul {
+        display: none;
+        width: 100%;
+        background-color: white;
+      }
+      .show {
+        display: block;
+        position: absolute;
+        justify-content: left;
+        flex-direction: column;
+        top: 70px;
+        left: 0;
+        padding: 0;
+        margin: 0 auto;
+        li {
+          width: 100%;
+          margin: 0;
+          margin-left: 30px;
+        }
+      }
+    }
+  }
+}
