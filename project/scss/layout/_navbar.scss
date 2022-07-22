@@ -31,7 +31,6 @@
     align-items: center;
     width: 100%;
     ul {
-      z-index: 99;
       display: flex;
       width: 100%;
       align-items: center;
@@ -58,10 +57,10 @@
       }
     }
     .menu {
+      contain: none;
       display: none;
       position: relative;
       width: 100%;
-      z-index: 99;
       align-items: center;
       justify-content: right;
       @include media(1300px) {

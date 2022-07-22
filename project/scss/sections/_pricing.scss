@@ -10,10 +10,14 @@
     margin-top: 50px;
     gap: 20px;
     @include media(below) {
-      grid-auto-flow: row;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       margin-top: 0;
       .card {
         position: unset !important;
+        width: 75%;
       }
     }
     .card {

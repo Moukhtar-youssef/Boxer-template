@@ -21,6 +21,7 @@ gulp.task("scss", () => {
     .src("./project/css/*.scss")
     .pipe(sass())
     .pipe(concat("main.css"))
+    .pipe(cleanCSS())
     .pipe(prefix("last 2 version"))
     .pipe(gulp.dest("./dist/css"))
     .pipe(gulp.dest("./project/css"))

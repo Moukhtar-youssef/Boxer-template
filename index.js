@@ -1,10 +1,12 @@
-var StaticServer = require("static-server"),
-  server = new StaticServer({
-    rootPath: "./dist/",
-    port: 8000,
-  }),
-  open = require("open");
-server.start(() => {
-  console.log("server listening to ", server.port);
-  open("http://localhost:" + server.port);
-});
+var statik = require("node-static"),
+  path = require("path"),
+  file = new statik.Server(`..\\${path.basename(__dirname)}`);
+require("http")
+  .createServer(function (request, response) {
+    request
+      .addListener("end", function () {
+        file.serve(request, response);
+      })
+      .resume();
+  })
+  .listen(8000);
