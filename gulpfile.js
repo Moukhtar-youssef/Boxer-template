@@ -8,11 +8,10 @@ var gulp = require("gulp"),
   cleanCSS = require("gulp-clean-css"),
   uglify = require("gulp-uglify"),
   babel = require("gulp-babel");
-
 gulp.task("html", () => {
   return gulp
     .src("./project/index.pug")
-    .pipe(pug({ pretty: true }))
+    .pipe(pug())
     .pipe(gulp.dest("dist/"))
     .pipe(livereload());
 });

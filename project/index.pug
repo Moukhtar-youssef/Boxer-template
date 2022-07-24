@@ -1,5 +1,5 @@
 doctype html
-html(lang="en")
+html(lang="en",style="font-family:sans-serif")
   head
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
@@ -11,20 +11,20 @@ html(lang="en")
   body 
     //- start navbar
     .navbar 
-      .logo
-        |Boxer
       .container
+        .logo
+          |Boxer
         ul 
           li  
-            a.active(href="#home") home 
+            a.active.home(href="#home") home 
           li 
-            a(href="#features") features 
+            a.features(href="#features") features 
           li 
-            a(href="#pricing") pricing 
+            a.pricing(href="#pricing") pricing 
           li 
-            a(href="#download") download 
+            a.download(href="#download") download 
           li 
-            a(href="#contact") contact 
+            a.contact(href="#contact") contact 
         .menu
           .icon
             span 
@@ -51,7 +51,7 @@ html(lang="en")
           img(src="../dist/img/software-img.webp", alt="", srcset="")
     //- end home 
     //- start advantages 
-    section.advantages#advantages
+    div.advantages#advantages
       .container
         .card
           a.fa.fa-laptop
@@ -67,7 +67,7 @@ html(lang="en")
           p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
     //- end advantages 
     //- start features
-    section.features#features 
+    section.features#features
       .container
         .content
           .text
@@ -169,5 +169,11 @@ html(lang="en")
             textarea(name="",placeholder="message")
             button send
     //- end contact
+    //- start footer
+    footer
+      .container
+        p
+        | Copyright &copy; 2022 Moukhtar Youssef
+    //- end footer
   script(src="./js/main.js") 
   script(src="http://localhost:35729/livereload.js")

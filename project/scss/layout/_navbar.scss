@@ -7,29 +7,24 @@
   align-items: center;
   background-color: white;
   z-index: 99;
-  .logo {
-    color: $main-color;
-    font-size: 30px;
-    font-weight: bold;
-    line-height: 35px;
-    cursor: pointer;
-    position: fixed;
-    margin: 0px 400px;
-    @include media(1600px) {
-      margin: 0px 100px;
-    }
-    @include media(1300px) {
-      margin: 0px 10px;
-    }
-    &:hover {
-      color: #666;
-    }
-  }
+  box-shadow: 0px 1px 15px #666;
   .container {
     height: 70px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    contain: none;
     width: 100%;
+    .logo {
+      color: $main-color;
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 35px;
+      cursor: pointer;
+      &:hover {
+        color: #666;
+      }
+    }
     ul {
       display: flex;
       width: 100%;
@@ -47,6 +42,7 @@
           height: 70px;
           line-height: 40px;
           text-transform: uppercase;
+          background: transparent !important;
           &:hover {
             color: $main-color;
           }
@@ -59,7 +55,6 @@
     .menu {
       contain: none;
       display: none;
-      position: relative;
       width: 100%;
       align-items: center;
       justify-content: right;
@@ -67,13 +62,14 @@
         display: flex;
       }
       .icon {
-        margin: 20px 0;
+        right: 20px;
         position: relative;
+        margin: 20px 0;
         width: 30px;
         height: 12px;
         display: flex;
-        flex-wrap: wrap;
         justify-content: flex-end;
+        float: right;
         span {
           position: absolute;
           background-color: #333;
@@ -112,24 +108,24 @@
         }
       }
       ul {
-        display: none;
-        width: 100%;
-        background-color: white;
-      }
-      .show {
         display: block;
         position: absolute;
-        justify-content: left;
-        flex-direction: column;
+        width: 100%;
+        background-color: white;
+        right: 0;
         top: 70px;
-        left: 0;
-        padding: 0;
-        margin: 0 auto;
+        height: 0;
+        overflow: hidden;
+        float: left;
+        transition: $main-transition;
         li {
           width: 100%;
           margin: 0;
           margin-left: 30px;
         }
+      }
+      .show {
+        height: 200px;
       }
     }
   }

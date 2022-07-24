@@ -1,12 +1,8 @@
-var statik = require("node-static"),
-  path = require("path"),
-  file = new statik.Server(`..\\${path.basename(__dirname)}`);
-require("http")
-  .createServer(function (request, response) {
-    request
-      .addListener("end", function () {
-        file.serve(request, response);
-      })
-      .resume();
-  })
-  .listen(8000);
+var staticserver = require("static-server");
+var server = new staticserver({
+  rootPath: "./",
+  port: 8000,
+});
+server.start(() => {
+  console.log("server listening to ", server.port);
+});
